@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timestamper for Youtube</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <img src="Logo_of_YouTube_(2015-2017).svg" height="150px">
+        <h1>TimeStamper</h1>
+    </div>
+
+    <div class="content">
+        <form>
+            <input type="text" name="userLink" id="userLink" placeholder="Enter your link here">
+        </form>
+
+      <form>
+        <input type="submit" value="Paste" onclick="pasteFromClipboard(); return false;">
+      </form>
+
+        <form class="bottom-form">
+            <label for="hour">H</label>
+            <input type="number" name="hour" id="hour" min="0" step="1" value="0">
+            <label for="minute">M</label>
+            <input type="number" name="minute" id="minute" min="0" step="1" value="0">
+            <label for="second">S</label>
+            <input type="number" name="second" id="second" min="0" step="1" value="0">
+            <br>
+        </form>
+
+        <button class="copy" onclick="copyLink()">Copy</button>
+    </div>
+
+    <div id="linkPreview"></div>
+
+    <script src="scripts.js"></script>
+</body>
